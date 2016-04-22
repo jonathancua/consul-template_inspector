@@ -20,6 +20,9 @@ import (
 	"github.com/hashicorp/consul-template/dependency"
 )
 
+const Name = "consul-template_inspector"
+const Version = "0.1.0"
+
 type KeyPair []struct {
 	LockIndex   uint64
 	Key         string
