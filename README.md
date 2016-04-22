@@ -1,3 +1,5 @@
+![Build Status](https://travis-ci.org/jonathancua/consul-template_inspector.svg?branch=master)
+
 Description
 -------------
 
