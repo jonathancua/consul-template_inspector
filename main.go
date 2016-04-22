@@ -14,6 +14,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"path/filepath"
 	"strings"
 
 	"github.com/hashicorp/consul-template/dependency"
@@ -129,6 +130,11 @@ func main() {
 	if len(os.Args) <= 1 {
 		fmt.Printf("Usage of %s:\n", os.Args[0])
 		flag.PrintDefaults()
+		os.Exit(1)
+	}
+
+	if err := filepath.Ext(config.file); err != ".ctmpl" {
+		fmt.Println("File extension needs to end in .ctmpl.")
 		os.Exit(1)
 	}
 
